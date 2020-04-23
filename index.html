@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>视频案例</title>
+		<link rel="shortcut icon" href="#" />
+		<style>
+			video {
+				transform: rotateY(180deg);
+				box-sizing: border-box;
+				border-radius: 2px;
+				box-shadow: rgba(156, 172, 172, 0.2) 0px 2px 2px, rgba(156, 172, 172, 0.2) 0px 4px 4px, rgba(156, 172, 172, 0.2) 0px 8px 8px, rgba(156, 172, 172, 0.2) 0px 16px 16px, rgba(156, 172, 172, 0.2) 0px 32px 32px, rgba(156, 172, 172, 0.2) 0px 64px 64px;
+			}
+
+			#local_video {
+				width: 640px;
+				height: 480px;
+			}
+
+			#remote_video {
+				width: 320px;
+				height: 240px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<h1>视频通话Demo</h1>
+			<div class="button_container">
+				<button id="callOut">呼叫</button>
+				<button id="takeIn">接受</button>
+				<button id="hangUp">挂断</button>
+			</div>
+			<hr>
+			<div class="video_container">
+				<video id="local_video" autoplay></video>
+				<video id="remote_video" autoplay muted></video>
+			</div>
+			<hr>
+			<script src="/socket.io/socket.io.js"></script>
+			<script src="https://webrtc.github.io/adapter/adapter-latest.js"></script>
+			<script src="js/client.js"></script>
+		</div>
+	</body>
+</html>
